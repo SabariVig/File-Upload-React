@@ -18,7 +18,9 @@ export class FileList extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.getdata}>lol</button>
+        <button onClick={this.getdata}>Get Data</button>
+        <button>DIsplay Data</button>
+
       </div>
     );
   }
