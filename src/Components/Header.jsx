@@ -2,21 +2,26 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 export class Header extends Component {
+
+  
+
   render() {
-    return (
+// const {data}= this.props
+// console.log(data)
+// const display=data.map(ele=> <li ><Link to={ele.url} style={{"fontSize":"3em"}}>{ele.name}</Link></li>       )
+ return (
       <div>
         <div className="header header-fixed">
           <div className="navbar container">
             <div className="logo">
-              <Link to="/">Hawk</Link>
             </div>
-            <label htmlFor="navbar-toggle">
-              <i />
-            </label>
+
             <nav className="menu">
               <ul>
-                <li>Login</li>
-                <li>Register</li>
+                {/* {display} */}
+              <li ><Link to="/" style={{"fontSize":"3em"}}>Hawk</Link></li>              
+              {/* <li ><Link to="/" style={{"fontSize":"3em"}}>Hawk</Link></li>               */}
+
               </ul>
             </nav>
           </div>

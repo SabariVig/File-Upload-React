@@ -6,25 +6,34 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { Link } from "react-router-dom";
 
 const Lister = ({ data }) => {
-  const display = data.data.name.map(lols => (
+  const OpenLink = async lols => {
+    window.location.href = "https://83g8t.sse.codesandbox.io/uploads/" + lols;
+  };
 
-      <Link className="Link" to={lols} >
-    <ListItem  style={{"marginLeft":"15%","width":"70%"}} button key={lols} className="list-font" >
-      <ListItemIcon style={{"fontSize":"2.2em"}}>
-      <i className="far fa-file-alt"></i>
+  const display = data.data.name.map(lols => (
+    <ListItem
+      style={{ marginLeft: "15%", width: "70%" }}
+      button
+      className="list-font"
+      key={lols}
+    >
+      <ListItemIcon style={{ fontSize: "2.2em" }}>
+      <span class="jam jam-file"></span>
       </ListItemIcon>
-        <ListItemText style={{"fontSize":"1.8em"}} primary={lols} />
-      <ListItemIcon >
-      <i style={{"fontSize":"1em"}} class="fas fa-external-link-alt"></i>
-      </ListItemIcon>
-    </ListItem>
+
+      <ListItemText style={{ fontSize: "1em" }} primary={lols} />
+
+      <Link className="Link" onClick={() => OpenLink(lols)} to="/">
+        <ListItemIcon>
+        <span style={{fontSize:"2em"}} className="jam jam-download"></span>
+        </ListItemIcon>
       </Link>
-  
-    ));
+    </ListItem>
+  ));
   return (
     <div>
       <List component="nav" aria-label="Main mailbox folders">
-{display}
+        {display}
       </List>
     </div>
   );
