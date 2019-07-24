@@ -3,33 +3,46 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import { Link } from "react-router-dom";
 
-const Lister = ({ data }) => {
-  const OpenLink = async lols => {
-    window.location.href = "https://83g8t.sse.codesandbox.io/uploads/" + lols;
-  };
 
-  const display = data.data.name.map(lols => (
+const Lister = ({ data,variable ,ic1Click,ic2Click,ic1,ic2,ic3}) => {
+ 
+const li1=`https://img.icons8.com/material-rounded/20/000000/${ic1}.png`
+const li2=`https://img.icons8.com/material-rounded/20/000000/${ic2}.png`
+const li3=`https://img.icons8.com/material-rounded/20/000000/${ic3}.png`
+
+
+
+  const display = data[variable].map(lols => (
     <ListItem
-      style={{ marginLeft: "15%", width: "70%" }}
+    style={{width:"90%" ,marginLeft:"7%"}}
       button
       className="list-font"
       key={lols}
     >
-      <ListItemIcon style={{ fontSize: "2.2em" }}>
-      <span class="jam jam-file"></span>
+      <ListItemIcon >
+      <img alt="" src={li1}/>
       </ListItemIcon>
 
       <ListItemText style={{ fontSize: "1em" }} primary={lols} />
 
-      <Link className="Link" onClick={() => OpenLink(lols)} to="/">
+      <div  className="Link" onClick={() => ic1Click(lols)} >
         <ListItemIcon>
-        <span style={{fontSize:"2em"}} className="jam jam-download"></span>
+        <img alt="" src={li2}/>
         </ListItemIcon>
-      </Link>
+      </div>
+
+    <div onClick={()=>ic2Click(lols)}>
+        <ListItemIcon>
+        <img alt="" src={li3}/>
+        </ListItemIcon>
+    </div>
+
+
     </ListItem>
   ));
+
+
   return (
     <div>
       <List component="nav" aria-label="Main mailbox folders">
