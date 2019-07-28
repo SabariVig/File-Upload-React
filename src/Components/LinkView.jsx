@@ -10,7 +10,7 @@ const LinkView = () => {
 
 
   const handelData = async () => {
-    const reqd = await axios.get("https://83g8t.sse.codesandbox.io/url");
+    const reqd = await axios.get(process.env.REACT_APP_API_ID+"url");
     var data = { data: [] };
     reqd.data.map(ele => data.data.push(ele.url));
      data.data.reverse()
@@ -46,7 +46,7 @@ handelData();
         initialValues={{ url: "" }}
         onSubmit={async values => {
           await axios
-            .post("https://83g8t.sse.codesandbox.io/url", {
+            .post((process.env.REACT_APP_API_ID+"url"), {
               url: values.url
             })
             .then(function(value){

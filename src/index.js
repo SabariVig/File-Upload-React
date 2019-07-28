@@ -13,7 +13,7 @@ const App = () => (
   <div className="App">
     <Header />
     {/* // data={[{name: "Hawk",url: "/"}]} */}
-
+  {console.log(process.env.REACT_APP_API_ID)}
     <FileUpload className="fileupload" />
     <Divider />
     <Switch>

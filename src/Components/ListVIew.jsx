@@ -11,14 +11,14 @@ export class FileList extends Component {
   };
 
    OpenLink = async lols => {
-    window.location.href = "https://83g8t.sse.codesandbox.io/uploads/" + lols;
+    window.location.href = process.env.REACT_APP_API_ID+"/uploads/" + lols;
   };
 
     
 
   async componentDidMount() 
    {
-    const {data} = await axios.get("https://83g8t.sse.codesandbox.io/list");
+    const {data} = await axios.get(process.env.REACT_APP_API_ID+"list");
     // console.log(data);
     this.setState({ data });
     this.setState({ display: true });

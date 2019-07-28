@@ -18,7 +18,7 @@ const FileUpload = () => {
     const formdata = new FormData();
     formdata.append("file", file);
     await axios
-      .post("https://83g8t.sse.codesandbox.io/", formdata, {
+      .post(process.env.REACT_APP_API_ID, formdata, {
         header: {
           "Content-Type": "multipart/form-data"
         }
