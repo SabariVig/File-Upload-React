@@ -1,34 +1,17 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom';
 
-export class Header extends Component {
 
-  
-
-  render() {
-// const {data}= this.props
-// console.log(data)
-// const display=data.map(ele=> <li ><Link to={ele.url} style={{"fontSize":"3em"}}>{ele.name}</Link></li>       )
- return (
-      <div>
-        <div className="header header-fixed">
-          <div className="navbar container">
-            <div className="logo">
-            </div>
-
-            <nav className="menu">
-              <ul>
-                {/* {display} */}
-              <li ><Link to="/" style={{"fontSize":"3em"}}>Hawk</Link></li>              
-              {/* <li ><Link to="/" style={{"fontSize":"3em"}}>Hawk</Link></li>               */}
-
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    );
-  }
+const Header =()=>{
+  return(
+    <div className="navbar-f" style={{textAlign:"left","box-shadow": "26px 24px 14px -23px rgba(184,184,184,0.8)"}}>
+      <nav>
+        <Link to="/sxsx"><button  className="navbar-l">Logo  <img src="http://logok.org/wp-content/uploads/2015/09/Google-logo-2015-G-icon.png" alt="" height="30" srcset=""/>  </button></Link>
+        <button className="navbar-l">Login  <i class="fas fa-sign-in-alt"></i></button>
+        <button className="navbar-l">Files <i class="far fa-file"></i> </button>
+      </nav>
+    </div>
+  )
 }
 
 export default Header;

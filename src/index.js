@@ -11,10 +11,10 @@ import LinkView from "./Components/LinkView";
 
 const App = () => (
   <div className="App">
-    <Header />
+    <Header  />
     {/* // data={[{name: "Hawk",url: "/"}]} */}
-  {console.log(process.env.REACT_APP_API_ID)}
-    <FileUpload className="fileupload" />
+
+    <FileUpload  className="fileupload" />
     <Divider />
     <Switch>
     <Route path="/file" component={FileList} ></Route>
