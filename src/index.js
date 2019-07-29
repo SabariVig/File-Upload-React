@@ -11,10 +11,10 @@ import LinkView from "./Components/LinkView";
 
 const App = () => (
   <div className="App">
-    <Header  />
+    <Header className="header"  />
     {/* // data={[{name: "Hawk",url: "/"}]} */}
 
-    <FileUpload  className="fileupload" />
+    <FileUpload  className="fileupload"  />
     <Divider />
     <Switch>
     <Route path="/file" component={FileList} ></Route>

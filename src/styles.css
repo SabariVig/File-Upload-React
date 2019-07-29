@@ -199,6 +199,7 @@ a{
 
 body {
   margin: 0;
+  fill:red;
 }
 
 
@@ -206,7 +207,6 @@ body {
 .navbar-l{
   background-color: #128DFF;
   border: none;
-  /* background-color: #fff; */
   width: 33.33%;
   font-family:Google-Sans-Bold;
   font-size: 1.9em;
@@ -215,13 +215,16 @@ body {
   
   
 }
+svg{
+  fill:blue;
+}
+
 
 .navbar-f{
   position: fixed;
   top: 0;
-  /* overflow: hidden; */
+  z-index: 10000;
   width: 100%;
-
   margin-bottom:30px;
 
 }

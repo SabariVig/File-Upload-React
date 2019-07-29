@@ -7,9 +7,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 
 const Lister = ({ data,variable ,ic1Click,ic2Click,ic1,ic2,ic3}) => {
  
-const li1=`https://img.icons8.com/material-rounded/20/000000/${ic1}.png`
-const li2=`https://img.icons8.com/material-rounded/20/000000/${ic2}.png`
-const li3=`https://img.icons8.com/material-rounded/20/000000/${ic3}.png`
+
+
 
 
 
@@ -21,20 +20,20 @@ const li3=`https://img.icons8.com/material-rounded/20/000000/${ic3}.png`
       key={lols}
     >
       <ListItemIcon >
-      <img alt="" src={li1}/>
+      <img alt="" src={ic1} height="25"/>
       </ListItemIcon>
 
       <ListItemText style={{ fontSize: "1em" }} primary={lols} />
 
       <div  className="Link" onClick={() => ic1Click(lols)} >
         <ListItemIcon>
-        <img alt="" src={li2}/>
+        <img alt="" height="20" src={ic2}/>
         </ListItemIcon>
       </div>
 
     <div onClick={()=>ic2Click(lols)}>
         <ListItemIcon>
-        <img alt="" src={li3}/>
+        <img alt="" height="20" src={ic3}/>
         </ListItemIcon>
     </div>
 

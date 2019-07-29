@@ -3,6 +3,10 @@ import { Formik } from "formik";
 import axios from "axios";
 import Lister from "./lister";
 import { GooSpinner } from "react-spinners-kit";
+import chainlink from '../assets/link-c.svg'
+import copy from '../assets/copy.svg'
+import link from '../assets/link.svg'
+
 
 const LinkView = () => {
   const [data, setData] = useState("");
@@ -94,9 +98,9 @@ handelData();
           variable="data"
           ic1Click={CopyLink}
           ic2Click={OpenLink}
-          ic1="link"
-          ic2="copy"
-          ic3="external-link"
+          ic1={chainlink}
+          ic2={copy}
+          ic3={link}
         />
       )}
     </div>

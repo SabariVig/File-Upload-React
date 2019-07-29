@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 import Lister from "./lister";
 import { GooSpinner } from "react-spinners-kit";
-
+import file from '../assets/file.svg'
+import download from '../assets/download.svg'
+import link from '../assets/link.svg'
 
 export class FileList extends Component {
   state = {
@@ -11,7 +13,7 @@ export class FileList extends Component {
   };
 
    OpenLink = async lols => {
-    window.location.href = process.env.REACT_APP_API_ID+"/uploads/" + lols;
+    window.location.href = process.env.REACT_APP_API_ID+"uploads/" + lols;
   };
 
     
@@ -34,7 +36,7 @@ export class FileList extends Component {
       size={30}
       color="#128DFF"
       loading={!this.state.data} /></div>
-        {this.state.display && <Lister data={this.state.data} variable="name" ic1Click={this.OpenLink}  ic2Click={{}}  ic1="file--v2" ic2="download" ic3="external-link" />}
+        {this.state.display && <Lister data={this.state.data} variable="name" ic1Click={this.OpenLink}  ic2Click={{}}  ic1={file} ic2={download} ic3={link} />}
       </div>
     );
   }
