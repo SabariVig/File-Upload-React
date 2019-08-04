@@ -85,3 +85,6 @@ This hook will `npm prune && npm install` each time you `git pull` something if 
 
 This hook will just ensure you will commit something not broken bye pruning npm packages not in the `package.json` & eventually reinstall missings/not correctly removed packages.
 Then it will try a production build.
+
+## License
+[MIT](https://github.com/SabariVig/File-Upload-React/blob/master/LICENSE)
