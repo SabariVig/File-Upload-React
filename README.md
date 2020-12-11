@@ -1,2 +1,2 @@
 # Basic File Manager and Clipboard Manager
-[Link](https://filemanager.lxz.io)
+[File Manager Project](https://filemanager.lxz.io)
